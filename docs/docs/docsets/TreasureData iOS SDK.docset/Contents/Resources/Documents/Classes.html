@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Classes" class="dashAnchor"></a>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">TreasureData iOS SDK 0.8.0 Docs</a> (89% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">TreasureData iOS SDK Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/TDClient.html">TDClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TreasureData.html">TreasureData</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:TreasureData.h@T@ErrorHandler">ErrorHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:TreasureData.h@T@SuccessHander">SuccessHander</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TDClient"></a>
+                    <a name="//apple_ref/objc/Class/TDClient" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TDClient">TDClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The internal client using for sending requests. Most of the exposed properties could be configured via the container <code><a href="Classes/TreasureData.html">TreasureData</a></code> instance. You probably need this only to tuning the retry parameters.</p>
+
+                        <a href="Classes/TDClient.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">TDClient</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">TDClient</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)TreasureData"></a>
+                    <a name="//apple_ref/objc/Class/TreasureData" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)TreasureData">TreasureData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The main interface for the SDK. All initialization and configuration (except retry parameters) could be done through here.</p>
+
+<p>Minimal example:</p>
+<pre class="highlight objective_c"><code> <span class="p">[</span><span class="n">TreasureData</span> <span class="nf">initializeWithApiKey</span><span class="p">:</span><span class="s">@"&lt;your_write_only_api_key&gt;"</span><span class="p">];</span>
+
+ <span class="p">[[</span><span class="n">TreasureData</span> <span class="nf">sharedInstance</span><span class="p">]</span> <span class="nf">addEvent</span><span class="p">:@{</span><span class="s">@"welcome"</span><span class="o">:</span> <span class="s">@"Hello world"</span><span class="p">}</span>
+                                <span class="nl">database:</span><span class="s">@"my_db"</span>
+                                <span class="nl">table:</span><span class="s">@"my_ios_events"</span><span class="p">];</span>
+
+ <span class="p">[[</span><span class="n">TreasureData</span> <span class="nf">sharedInstance</span><span class="p">]</span> <span class="nf">uploadEvents</span><span class="p">];</span>
+</code></pre>
+
+                        <a href="Classes/TreasureData.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">TreasureData</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">TreasureData</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/treasure-data/td-ios-sdk" target="_blank" rel="external">mitsu, huylenq, and tung-vu-td</a>. All rights reserved. (Last updated: 2021-08-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

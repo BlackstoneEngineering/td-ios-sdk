@@ -63,8 +63,6 @@ jobs:
           git commit -m "[ci-bot] Updating docs microsite to latest from master"
           echo "[log pwd]"
           pwd
-          echo "[log env]"
-          env
       - name: deploy docs
         uses: ad-m/github-push-action@master
         with:
